@@ -1,0 +1,34 @@
+{   "addressData": {
+    "selectedAddressId": "12",
+    "billingAddressInfos": [
+        {
+            "active": true,
+            "addressLine1": "E-467 hardev puri street no-5 shahdara",
+            "addressLine2": "Hardev puri shahdara",
+            "city": "New Delhi",
+            "creationSource": "PHYSICAL",
+            "id": "12",
+            "isDefault": false,
+            "landmark": "Dev public school",
+            "locationTypeTag": "HOME",
+            "name": "Nishant",
+            "phone": "8076539414",
+            "pincode": "110093",
+            "state": "Delhi"
+        },
+        {
+            "active": true,
+            "addressLine1": "A 74 sector 50",
+            "addressLine2": "Noida",
+            "city": "Noida",
+            "creationSource": "PHYSICAL",
+            "id": "125",
+            "isDefault": false,
+            "landmark": "ramagya school",
+            "locationTypeTag": "HOME",
+            "name": "Nishant Choudhary",
+            "phone": "8076539414",
+            "pincode": "201301",
+            "state": "Uttar Pradesh"
+        }]
+}}

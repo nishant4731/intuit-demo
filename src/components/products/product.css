@@ -1,0 +1,436 @@
+.list-container {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    list-style-type: none;
+    column-gap: 15px;
+    grid-row-gap: 15px;
+}
+.list-container li  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.list-container li .img-wrapper {
+    text-align: center;
+}
+
+.list-container li .img-wrapper img {
+    width: 50%;
+    aspect-ratio: 3 / 2;
+}
+
+.list-box {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.list-box:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    left: 5px;
+    top: 5px;
+}
+
+.list-box.active:before {
+    content: "\2713";
+    color: white;
+    background: blue;
+    border: 1px solid blue;
+}
+
+.button-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+    text-align: right;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    align-items: center;
+    min-height: 66px;
+}
+.button-wrapper h3 {
+    margin: 0;
+}
+
+.button-wrapper button {
+    background: orangered;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    width: 150px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-wrapper button.disabled {
+    background-color: gray;
+    pointer-events: none;
+}
+
+.cart-button {
+    background: aquamarine;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: black;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cart-wrapper button {
+    cursor: pointer;
+}
+
+.cart-wrapper {
+    margin-top: 10px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-wrapper {
+    display: inline-flex;
+    min-width: 100px;
+    justify-content: space-between;
+}
+
+.load-more {
+    padding: 10px 20px;
+    background-color: blue;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid black;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+ } 
+ .loader-wrap {
+    text-align: center;
+ }
+
+ .breadcrumbs-wrapper {
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 15px 10px;
+    display: flex;
+ }
+
+ .breadcrumbs-wrapper li {
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
+    text-transform: capitalize;
+ }
+
+ .breadcrumbs-wrapper li.active span {
+    color: blue;
+    text-decoration: underline;
+ }
+
+ .breadcrumbs-wrapper li.disable span {
+    cursor: not-allowed;
+ }
+ .address-wrapper {
+    text-align: left;
+    padding: 60px;
+    width: 50%;
+    cursor: pointer;
+ }
+
+.address-wrapper li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+ }
+
+ .address-wrapper li h3{
+    margin: 0 0 20px;
+    display: inline-block;
+ }
+
+ .address-info span {
+    display: inline-block;
+    margin-left: 10px;
+ }
+
+ .address-info strong {
+    display: inline-block;
+    margin-left: 10px;
+ }  
+ .address-wrapper p {
+    margin: 0;
+ }
+
+ .address-wrapper li::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    position: absolute;
+    left: -40px;
+    top: 0;
+ }
+
+ .address-wrapper li.active::before {
+    border-color: blue;
+ }
+
+ .address-wrapper li.active::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    left: -36px;
+    top: 4px;
+    background-color: blue;
+ }
+
+ input[type="text"] {
+    border: 2px solid #afbdcf;
+    border-radius: 5px;
+    height: 47px;
+    width:300px;
+    color: #000000;
+    font-size: 14px;
+    padding-left: 20px;
+    box-shadow: none;  
+    box-sizing: border-box;
+  }
+  textarea {
+    height: 50vh;
+    resize: none;
+    padding: 10px 20px 0 20px;
+    font-size: 14px;
+    color: #000;
+    padding-left: 20px;
+    border: 2px solid #afbdcf;
+    box-shadow: none;  
+    border-radius: 5px;
+    outline: none;
+    width: 300px;
+    box-sizing: border-box;
+  }
+  input:focus + label, textarea:focus + label, input:valid + label, textarea:valid + label {
+    font-size: 12px;
+    color: #afbdcf;
+    top: -5px;
+    left:10px;
+    background: #ffffff;
+    padding: 0px 5px 0px 5px;
+  }
+
+  .input_wrap {
+    width:auto; 
+    height:auto; 
+    position:relative;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .input_wrap label {
+    font-family:arial;
+    font-size:16px;
+    color: #afbdcf;
+    padding: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+    pointer-events: none;
+  
+  }
+  
+  input[type="text"]:focus {outline:none;}
+
+  .form_wrap {
+    width: 500px;
+    background: white;
+    margin: 50px auto;
+    padding: 50px 0px 50px 50px;
+    outline: 5px solid rgba(0,0,0,0.1);
+    position:relative;
+  }
+
+  .address-type {
+    text-align: left;
+  }
+
+  .address-type label {
+    font-weight: bold;
+    color: gray;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .address-type ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    padding-left: 29px;
+  }
+
+  .address-type li {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .address-type li::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    position: absolute;
+    left: -30px;
+    top: 0;
+  }
+
+  .address-type li.active::before {
+    border-color: blue;
+ }
+
+ .address-type li.active::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    left: -26px;
+    top: 4px;
+    background-color: blue;
+ }
+ .select-style {
+    padding: 0;
+    margin: 0;
+    border: 2px solid #afbdcf;
+    width: 300px;
+    height: 47px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+
+    background: #fff url("") no-repeat 90% 50%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.select-style select {
+    box-sizing: border-box;
+    padding: 5px 8px;
+    width: 300px;
+    height: 47px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.add-new-address {
+    padding: 30px;
+    text-align: left;
+}
+
+.add-new-address button {
+    cursor: pointer;
+}
+
+.save-button-wrap {
+    text-align: left;
+    padding: 30px 0;
+}
+
+.save-button-wrap button {
+    padding: 10px 20px;
+    border: 0;
+    background-color: brown;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.deliver-wrap {
+    padding: 20px 0;
+}
+
+.deliver-wrap button {
+    padding: 10px 20px;
+    background-color: orangered;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+.pricing-wrapper {
+    text-align: left;
+    padding: 30px;
+}
+
+.checkout-wrapper button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: orangered;
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+}
+
+.final-price {
+    margin-bottom: 15px;
+}
